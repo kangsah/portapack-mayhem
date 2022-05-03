@@ -178,13 +178,13 @@ enum class PortaPackModel {
 static PortaPackModel portapack_model() {
 	static Optional<PortaPackModel> model;
 
-	if( !model.is_valid() ) {
-		if( audio_codec_wm8731.detected() ) {
+	//if( !model.is_valid() ) {
+	//	if( audio_codec_wm8731.detected() ) {
 			model = PortaPackModel::R1_20150901;
-		} else {
-			model = PortaPackModel::R2_20170522;
-		}
-	}
+	//	} else {
+	//		model = PortaPackModel::R2_20170522;
+	//	}
+	//}
 
 	return model.value();
 }
