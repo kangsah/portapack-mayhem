@@ -178,15 +178,15 @@ enum class PortaPackModel {
 static PortaPackModel portapack_model() {
 	static Optional<PortaPackModel> model;
 
-	if( !model.is_valid() ) {
+	//if( !model.is_valid() ) {
 		/*For the time being, it is impossible to distinguish the hardware of R1 and R2 from the software level*/
 		/*At this point, I2c is not ready.*/
 		//if( audio_codec_wm8731.detected() ) {
-		//	model = PortaPackModel::R1_20150901;
+			model = PortaPackModel::R1_20150901;
 		//} else {
-			model = PortaPackModel::R2_20170522;
+		//	model = PortaPackModel::R2_20170522;
 		//}
-	}
+	//}
 
 	return model.value();
 }
