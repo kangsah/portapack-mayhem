@@ -319,8 +319,8 @@ bool init() {
 	i2c0.start(i2c_config_boot_clock);
 
 	if( !portapack::cpld::update_if_necessary(portapack_cpld_config()) ) {
-		shutdown_base();
-		return false;
+		//shutdown_base();
+		//return false;
 	}
 
 	if( !hackrf::cpld::load_sram() ) {
